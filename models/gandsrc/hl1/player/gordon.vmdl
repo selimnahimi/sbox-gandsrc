@@ -24,6 +24,37 @@
 							]
 						}
 					},
+					{
+						_class = "Feet"
+						children = 
+						[
+							{
+								_class = "Foot"
+								name = "foot_l"
+								anklebone = "bip01_l_foot"
+								toebone = "bip01_l_foot"
+								balloffset = [ 3.0, 5.0, 0.0 ]
+								heeloffset = [ 3.0, 0.0, 0.0 ]
+								autolevel = true
+								traceheight = 40.0
+								traceradius = 4.0
+							},
+							{
+								_class = "Foot"
+								name = "foot_r"
+								anklebone = "bip01_r_foot"
+								toebone = "bip01_r_foot"
+								balloffset = [ 0.0, 0.0, 0.0 ]
+								heeloffset = [ 0.0, 0.0, 0.0 ]
+								autolevel = true
+								traceheight = 40.0
+								traceradius = 4.0
+							},
+						]
+						locktolerance = 0.6
+						heighttolerance = 2.0
+						sanitizetrajectories = true
+					},
 				]
 			},
 			{
@@ -2707,6 +2738,41 @@
 								_class = "AnimOffset"
 								translation = [ 0.0, 0.0, 0.0 ]
 								rotation_xyz = [ 0.0, 0.0, -90.0 ]
+							},
+						]
+						activity_name = ""
+						activity_weight = 1
+						weight_list_name = ""
+						fade_in_time = 0.2
+						fade_out_time = 0.2
+						looping = true
+						delta = false
+						worldSpace = false
+						hidden = false
+						anim_markup_ordered = false
+						disable_compression = false
+						source_filename = "models/gandsrc/sources/player/mp/gordon/gordon_anims/run.smd"
+						start_frame = -1
+						end_frame = -1
+						framerate = -1.0
+						take = 0
+						reverse = false
+					},
+					{
+						_class = "AnimFile"
+						name = "run_back"
+						children = 
+						[
+							{
+								_class = "ExtractMotion"
+								extract_tx = true
+								extract_ty = true
+								extract_tz = false
+								extract_rz = false
+								linear = false
+								quadratic = false
+								root_bone_name = ""
+								motion_type = "Single"
 							},
 						]
 						activity_name = ""
