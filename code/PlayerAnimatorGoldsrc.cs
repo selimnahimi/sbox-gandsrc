@@ -55,8 +55,6 @@ namespace Sandbox
 			//DebugOverlay.Text( Position + new Vector3( 0, 0, 80 ), $"{aimPos.z - Position.z}" );
 			//DebugOverlay.Box( Position + new Vector3( x, y, z ), Position + new Vector3( x + 50, y + 50, z + 50 ) );
 
-			DebugOverlay.Line( Position.WithZ(Position.z + 50), aimPos );
-
 			SetParam( "b_ducked", HasTag( "ducked" ) ); // old
 
 			if ( HasTag( "ducked" ) ) duck = duck.LerpTo( 1.0f, Time.Delta * 10.0f );
@@ -125,7 +123,7 @@ namespace Sandbox
 				Vector3 direction = new Vector3( 1.0f, 0.0f, 0.0f );
 				Vector3 newDirection = direction * Rotation.FromAxis( Vector3.Up, -angle );
 
-				DebugOverlay.Line( Position, Position + Rotation * newDirection * 100 );
+				//DebugOverlay.Line( Position, Position + Rotation * newDirection * 100 );
 				SetLookAt( "aim_move_direction", Position + newDirection * 100 );
 
 			}
