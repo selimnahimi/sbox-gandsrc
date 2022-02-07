@@ -20,7 +20,7 @@ namespace Sandbox
 		{
 			base.Spawn();
 
-			SetModel( "weapons/rust_pistol/rust_pistol.vmdl" );
+			SetModel( "models/gandsrc/hl1/w_crowbar.vmdl" );
 		}
 
 		public override void Reload()
@@ -58,7 +58,7 @@ namespace Sandbox
 
 		public override void SimulateAnimator( PawnAnimator anim )
 		{
-			anim.SetParam( "holdtype", 5 );
+			anim.SetParam( "holdtype", 6 );
 			anim.SetParam( "aimat_weight", 1.0f );
 			anim.SetParam( "holdtype_handedness", 0 );
 		}

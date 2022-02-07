@@ -92,6 +92,15 @@
 						weight = 1.0
 						ignore_rotation = true
 					},
+					{
+						_class = "Attachment"
+						name = "hold_R"
+						parent_bone = "bip01_r_hand"
+						relative_origin = [ 0.0, 0.0, 0.0 ]
+						relative_angles = [ 0.0, 0.0, 0.0 ]
+						weight = 1.0
+						ignore_rotation = false
+					},
 				]
 			},
 			{
@@ -149,7 +158,7 @@
 						name = "aim_1"
 						activity_name = ""
 						activity_weight = 1
-						weight_list_name = "TopWeightList"
+						weight_list_name = ""
 						fade_in_time = 0.2
 						fade_out_time = 0.2
 						looping = false
@@ -170,7 +179,7 @@
 						name = "aim_1_2"
 						activity_name = ""
 						activity_weight = 1
-						weight_list_name = "TopWeightList"
+						weight_list_name = ""
 						fade_in_time = 0.2
 						fade_out_time = 0.2
 						looping = false
@@ -2659,6 +2668,28 @@
 								root_bone_name = ""
 								motion_type = "Single"
 							},
+							{
+								_class = "AnimEvent"
+								event_class = "AE_FOOTSTEP"
+								event_frame = 0
+								event_keys = 
+								{
+									Attachment = ""
+									Foot = "0"
+									Volume = 1.0
+								}
+							},
+							{
+								_class = "AnimEvent"
+								event_class = "AE_FOOTSTEP"
+								event_frame = 11
+								event_keys = 
+								{
+									Attachment = ""
+									Foot = "1"
+									Volume = 1.0
+								}
+							},
 						]
 						activity_name = ""
 						activity_weight = 1
@@ -3072,7 +3103,15 @@
 								weight = 1.0
 							},
 							{
+								bone = "bip01_l_leg"
+								weight = 1.0
+							},
+							{
 								bone = "bip01_pelvis"
+								weight = 1.0
+							},
+							{
+								bone = "bip01_r_leg"
 								weight = 1.0
 							},
 							{
@@ -3107,15 +3146,38 @@
 							},
 							{
 								bone = "bip01_pelvis"
-								weight = 1.0
+								weight = 0.0
 							},
 							{
 								bone = "bip01_r_leg"
 								weight = 0.0
 							},
+							{
+								bone = "bip01_spine"
+								weight = 1.0
+							},
+							{
+								bone = "bip01_spine1"
+								weight = 1.0
+							},
+							{
+								bone = "bip01_spine2"
+								weight = 1.0
+							},
 						]
 						master_morph_weight = -1.0
 						morph_weights = [  ]
+					},
+				]
+			},
+			{
+				_class = "ModelModifierList"
+				children = 
+				[
+					{
+						_class = "RenameBone"
+						original_bone_name = "bip01_r_hand"
+						new_bone_name = "hold_R"
 					},
 				]
 			},
