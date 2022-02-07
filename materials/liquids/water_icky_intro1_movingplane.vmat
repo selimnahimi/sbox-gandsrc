@@ -1,0 +1,10 @@
+// Converted with vmt_to_vmat.py
+
+Layer0
+{
+	shader "vr_complex.vfx"
+
+	F_TRANSLUCENT 1
+	TextureTranslucency "materials\liquids\water_icky_intro1_movingplane_trans.tga"
+	g_vColorTint "[0.20392156862745098 0.19215686274509805 0.17254901960784313 0.0]"
+}

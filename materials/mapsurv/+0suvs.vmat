@@ -1,0 +1,11 @@
+// Converted with vmt_to_vmat.py
+
+Layer0
+{
+	shader "vr_complex.vfx"
+
+	TextureColor "materials\mapsurv\+0suvs_color.tga"
+	TextureDetail "materials/detail/frost02.tga"
+	F_DETAIL_TEXTURE 1
+	g_vDetailTexCoordScale "[5.0 5.0]"
+}

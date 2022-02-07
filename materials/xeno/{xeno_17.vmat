@@ -1,0 +1,10 @@
+// Converted with vmt_to_vmat.py
+
+Layer0
+{
+	shader "vr_complex.vfx"
+
+	TextureColor "materials\xeno\{xeno_17_color.tga"
+	F_TRANSLUCENT 1
+	TextureTranslucency "materials\xeno\{xeno_17_trans.tga"
+}

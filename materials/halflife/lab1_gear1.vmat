@@ -1,0 +1,11 @@
+// Converted with vmt_to_vmat.py
+
+Layer0
+{
+	shader "vr_complex.vfx"
+
+	TextureColor "materials\halflife\lab1_gear1_color.tga"
+	TextureDetail "materials/detail/detail_noise1.tga"
+	F_DETAIL_TEXTURE 1
+	g_vDetailTexCoordScale "[2.5 2.5]"
+}

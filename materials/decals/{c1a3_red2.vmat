@@ -1,0 +1,10 @@
+// Converted with vmt_to_vmat.py
+
+Layer0
+{
+	shader "vr_complex.vfx"
+
+	TextureColor "materials\decals\{c1a3_red2_color.tga"
+	F_TRANSLUCENT 1
+	TextureTranslucency "materials\decals\{c1a3_red2_trans.tga"
+}
