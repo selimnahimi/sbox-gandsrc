@@ -51,7 +51,7 @@
 							},
 						]
 						use_global_default = false
-						global_default_material = ""
+						global_default_material = "debug/debugempty.vmat"
 					},
 				]
 			},
@@ -143,13 +143,28 @@
 						source_filename = "models/gandsrc/sources/v_shotgun/v_shotgun_anims/idle4.smd"
 						start_frame = -1
 						end_frame = -1
-						framerate = 20.0
+						framerate = 10.0
 						take = 0
 						reverse = false
 					},
 					{
 						_class = "AnimFile"
 						name = "pump"
+						children = 
+						[
+							{
+								_class = "AnimEvent"
+								event_class = "AE_CL_PLAYSOUND"
+								event_frame = 2
+								event_keys = 
+								{
+									name = "hl1-weapons-shotgun-cock"
+									stop_on_seq_change = false
+									use_layer_sequence = false
+									tags = ""
+								}
+							},
+						]
 						activity_name = ""
 						activity_weight = 1
 						weight_list_name = ""
@@ -164,7 +179,7 @@
 						source_filename = "models/gandsrc/sources/v_shotgun/v_shotgun_anims/pump.smd"
 						start_frame = -1
 						end_frame = -1
-						framerate = 20.0
+						framerate = 13.0
 						take = 0
 						reverse = false
 					},
@@ -192,6 +207,21 @@
 					{
 						_class = "AnimFile"
 						name = "reload"
+						children = 
+						[
+							{
+								_class = "AnimEvent"
+								event_class = "AE_CL_PLAYSOUND"
+								event_frame = 0
+								event_keys = 
+								{
+									name = "hl1-weapons-shotgun-reload"
+									stop_on_seq_change = false
+									use_layer_sequence = false
+									tags = ""
+								}
+							},
+						]
 						activity_name = ""
 						activity_weight = 1
 						weight_list_name = ""
@@ -206,13 +236,28 @@
 						source_filename = "models/gandsrc/sources/v_shotgun/v_shotgun_anims/reload.smd"
 						start_frame = -1
 						end_frame = -1
-						framerate = 20.0
+						framerate = 13.0
 						take = 0
 						reverse = false
 					},
 					{
 						_class = "AnimFile"
 						name = "shoot"
+						children = 
+						[
+							{
+								_class = "AnimEvent"
+								event_class = "AE_CL_PLAYSOUND"
+								event_frame = 11
+								event_keys = 
+								{
+									name = "hl1-weapons-shotgun-cock"
+									stop_on_seq_change = false
+									use_layer_sequence = false
+									tags = ""
+								}
+							},
+						]
 						activity_name = ""
 						activity_weight = 1
 						weight_list_name = ""
@@ -234,6 +279,33 @@
 					{
 						_class = "AnimFile"
 						name = "shoot_big"
+						children = 
+						[
+							{
+								_class = "AnimEvent"
+								event_class = "AE_CL_PLAYSOUND"
+								event_frame = 12
+								event_keys = 
+								{
+									name = "hl1-weapons-shotgun-cock"
+									stop_on_seq_change = false
+									use_layer_sequence = false
+									tags = ""
+								}
+							},
+							{
+								_class = "AnimEvent"
+								event_class = "AE_CL_PLAYSOUND"
+								event_frame = 1
+								event_keys = 
+								{
+									name = "hl1-weapons-shotgun-fire"
+									stop_on_seq_change = false
+									use_layer_sequence = false
+									tags = ""
+								}
+							},
+						]
 						activity_name = ""
 						activity_weight = 1
 						weight_list_name = ""
@@ -248,7 +320,7 @@
 						source_filename = "models/gandsrc/sources/v_shotgun/v_shotgun_anims/shoot_big.smd"
 						start_frame = -1
 						end_frame = -1
-						framerate = 15.0
+						framerate = 13.0
 						take = 0
 						reverse = false
 					},
@@ -300,6 +372,6 @@
 		]
 		model_archetype = ""
 		primary_associated_entity = ""
-		anim_graph_name = ""
+		anim_graph_name = "models/gandsrc/hl1/v_shotgun.vanmgrph"
 	}
 }
