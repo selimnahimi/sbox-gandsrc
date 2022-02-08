@@ -2403,7 +2403,7 @@
 				}
 				m_lookatChainName = "LookAtChain"
 				m_attachmentName = "Forward"
-				m_flYawLimit = 180.0
+				m_flYawLimit = 90.0
 				m_flPitchLimit = 0.0
 				m_bResetBase = true
 				m_bLockWhenWaning = true
