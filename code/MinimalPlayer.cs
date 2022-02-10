@@ -62,6 +62,8 @@ namespace Sandbox
 			Armor = 0;
 			MaxArmor = 100;
 
+			SetAnimBool( "b_dead", false );
+
 			base.Respawn();
 		}
 
@@ -154,14 +156,13 @@ namespace Sandbox
 
 		public override void OnKilled()
 		{
-			_ = new Sandbox.ScreenShake.Perlin();
-
 			base.OnKilled();
 
 			DeathSound = PlaySound( "hl1-fvox-death" );
 
 			EnableAllCollisions = false;
-			EnableDrawing = false;
+			SetAnimBool( "b_dead", true );
+			// EnableDrawing = false;
 
 			Inventory.DropActive();
 			Inventory.DeleteContents();

@@ -766,6 +766,20 @@
 				m_fMaxValue = 360.0
 				m_bInterpolate = false
 			},
+			{
+				_class = "CBoolAnimParameter"
+				m_name = "b_dead"
+				m_id = 
+				{
+					m_id = 76426924
+				}
+				m_previewButton = "ANIMPARAM_BUTTON_NONE"
+				m_bNetwork = true
+				m_bUseMostRecentValue = false
+				m_bAutoReset = false
+				m_bPredicted = true
+				m_bDefaultValue = false
+			},
 		]
 	}
 	m_pTagManager = 
@@ -3766,7 +3780,7 @@
 			{
 				_class = "CRootAnimNode"
 				m_sName = "Unnamed"
-				m_vecPosition = [ -160.0, -2432.0 ]
+				m_vecPosition = [ 208.0, -2432.0 ]
 				m_nNodeID = 
 				{
 					m_id = 1521751852
@@ -3775,7 +3789,7 @@
 				m_sNote = ""
 				m_childID = 
 				{
-					m_id = 22435276
+					m_id = 1697589471
 				}
 			}
 		},
@@ -4007,6 +4021,82 @@
 				m_tagSpans = [  ]
 				m_sequenceName = "run_back"
 				m_playbackSpeed = 1.2
+				m_bLoop = true
+			}
+		},
+		{
+			key = 
+			{
+				m_id = 1697589471
+			}
+			value = 
+			{
+				_class = "CSelectorAnimNode"
+				m_sName = "Unnamed"
+				m_vecPosition = [ -64.0, -2432.0 ]
+				m_nNodeID = 
+				{
+					m_id = 1697589471
+				}
+				m_networkMode = "ServerAuthoritative"
+				m_sNote = ""
+				m_children = 
+				[
+					{
+						m_id = 22435276
+					},
+					{
+						m_id = 1717267792
+					},
+				]
+				m_tags = 
+				[
+					{
+						m_id = 4294967295
+					},
+					{
+						m_id = 4294967295
+					},
+				]
+				m_selectionSource = "SelectionSource_Bool"
+				m_boolParamID = 
+				{
+					m_id = 76426924
+				}
+				m_enumParamID = 
+				{
+					m_id = 4294967295
+				}
+				m_blendDuration = 0.2
+				m_tagBehavior = "SelectorTagBehavior_OffWhenFinished"
+				m_bResetOnChange = true
+				m_bSyncCyclesOnChange = false
+				m_blendCurve = 
+				{
+					m_vControlPoint1 = [ 0.5, 0.0 ]
+					m_vControlPoint2 = [ 0.5, 1.0 ]
+				}
+			}
+		},
+		{
+			key = 
+			{
+				m_id = 1717267792
+			}
+			value = 
+			{
+				_class = "CSequenceAnimNode"
+				m_sName = "Unnamed"
+				m_vecPosition = [ -272.0, -2256.0 ]
+				m_nNodeID = 
+				{
+					m_id = 1717267792
+				}
+				m_networkMode = "ServerAuthoritative"
+				m_sNote = ""
+				m_tagSpans = [  ]
+				m_sequenceName = "deadstomach"
+				m_playbackSpeed = 1.0
 				m_bLoop = true
 			}
 		},
