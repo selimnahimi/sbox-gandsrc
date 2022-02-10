@@ -33,6 +33,12 @@ namespace Sandbox
 
 		public override bool CanSecondaryAttack()
 		{
+			// Only fire after primary has ended
+			if ( TimeSincePrimaryAttack <= (1 / PrimaryRate) )
+			{
+				return false;
+			}
+
 			return base.CanSecondaryAttack() && Input.Down( InputButton.Attack2 ) && CurrentMag > 1;
 		}
 
@@ -56,6 +62,9 @@ namespace Sandbox
 
 		public override void AttackSecondary()
 		{
+
+			// TODO: able to attack after primary without waiting for secondary 
+			TimeSincePrimaryAttack = 0;
 			TimeSinceSecondaryAttack = 0;
 
 			Particles.Create( "particles/pistol_muzzleflash.vpcf", EffectEntity, "muzzle" );
@@ -120,7 +129,7 @@ namespace Sandbox
 
 		public override void SimulateAnimator( PawnAnimator anim )
 		{
-			anim.SetParam( "holdtype", 2 );
+			anim.SetParam( "holdtype", 3 );
 			anim.SetParam( "aimat_weight", 1.0f );
 			anim.SetParam( "holdtype_handedness", 0 );
 		}
