@@ -18,11 +18,6 @@ namespace Sandbox
 			Inventory = new Inventory( this );
 		}
 
-		/// <summary>
-		/// The clothing container is what dresses the citizen
-		/// </summary>
-		public Clothing.Container Clothing = new();
-
 		public override void Respawn()
 		{
 			DeathSound.Stop();
@@ -50,8 +45,6 @@ namespace Sandbox
 			EnableDrawing = true;
 			EnableHideInFirstPerson = true;
 			EnableShadowInFirstPerson = true;
-
-			Clothing.DressEntity( this );
 
 			Inventory.Add( new HL1Crowbar() );
 			Inventory.Add( new HL1Glock() );
