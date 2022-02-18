@@ -1,0 +1,8 @@
+version 1
+nodes
+  0 "usp_skin" -1
+end
+skeleton
+  time 0
+    0 2.540464 -2.544369 0.308208 0.053912 1.209326 -0.804817
+end

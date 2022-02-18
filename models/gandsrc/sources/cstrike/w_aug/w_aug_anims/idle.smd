@@ -1,0 +1,8 @@
+version 1
+nodes
+  0 "Steyr Aug" -1
+end
+skeleton
+  time 0
+    0 -0.379615 -2.545106 0.028039 -0.007099 -0.003152 0.509228
+end

@@ -1,0 +1,8 @@
+version 1
+nodes
+  0 "w_scout" -1
+end
+skeleton
+  time 0
+    0 0.908139 -2.449010 0.809667 0.785390 1.523045 0.406994
+end

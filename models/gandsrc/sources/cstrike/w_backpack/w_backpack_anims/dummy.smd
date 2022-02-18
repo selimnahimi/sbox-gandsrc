@@ -1,0 +1,8 @@
+version 1
+nodes
+  0 "Bomb" -1
+end
+skeleton
+  time 0
+    0 0.003135 0.015626 2.917553 1.568614 3.124139 0.000000
+end

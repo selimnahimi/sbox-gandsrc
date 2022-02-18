@@ -1,0 +1,8 @@
+version 1
+nodes
+  0 "w_glock18" -1
+end
+skeleton
+  time 0
+    0 0.760878 -0.463740 0.408123 0.048177 1.214590 -0.023490
+end

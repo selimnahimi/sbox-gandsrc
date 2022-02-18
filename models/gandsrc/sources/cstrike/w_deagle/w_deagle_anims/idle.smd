@@ -1,0 +1,8 @@
+version 1
+nodes
+  0 "deserteagl" -1
+end
+skeleton
+  time 0
+    0 1.292499 -0.435811 0.362919 -0.120789 1.190442 -0.121168
+end

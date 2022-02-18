@@ -1,0 +1,8 @@
+version 1
+nodes
+  0 "shield" -1
+end
+skeleton
+  time 0
+    0 0.191622 0.037489 1.283239 -1.562337 0.000961 0.616327
+end

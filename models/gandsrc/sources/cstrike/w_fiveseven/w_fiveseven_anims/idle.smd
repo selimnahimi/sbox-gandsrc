@@ -1,0 +1,8 @@
+version 1
+nodes
+  0 "FiveSeven" -1
+end
+skeleton
+  time 0
+    0 -0.145636 -0.411882 -0.037322 -0.004026 -0.004466 -0.707897
+end

@@ -1,0 +1,8 @@
+version 1
+nodes
+  0 "profile" -1
+end
+skeleton
+  time 0
+    0 -5.270259 -6.495036 0.365379 0.063909 1.544722 0.500180
+end

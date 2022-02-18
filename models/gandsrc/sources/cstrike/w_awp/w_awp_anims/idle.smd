@@ -1,0 +1,8 @@
+version 1
+nodes
+  0 "w_awp" -1
+end
+skeleton
+  time 0
+    0 3.005692 0.310316 0.694653 0.809597 1.534860 1.099023
+end
