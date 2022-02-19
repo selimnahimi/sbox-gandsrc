@@ -9,6 +9,7 @@ namespace Sandbox
 	[Library( "weapon_ak47", Title = "Counter-Strike 1.6 AK-47", Spawnable = true )]
 	partial class CS16AK47 : Weapon
 	{
+		public override float FieldOfView => 70.0f;
 		public override string ViewModelPath => "models/gandsrc/cstrike/v_ak47.vmdl";
 		public override float PrimaryRate => 10.0f;
 		public override float SecondaryRate => 1.0f;

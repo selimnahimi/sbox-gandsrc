@@ -9,15 +9,13 @@ namespace Sandbox
 	[Library( "weapon_m3", Title = "Counter-Strike 1.6 Benelli M3", Spawnable = true )]
 	partial class CS16M3 : GsrcShotgunBase
 	{
+		public override float FieldOfView => 70.0f;
 		public override string ViewModelPath => "models/gandsrc/cstrike/v_m3.vmdl";
 		public override float PrimaryRate => 1.0f;
 		public override float SecondaryRate => 0.6f;
 		public override float ReloadTime => 0.5f;
 		public override int MagSize { get; set; } = 8;
-		private bool reloadStart = true;
-		private float ReloadStartTime => 0.5f;
-
-		public TimeSince TimeSinceDischarge { get; set; }
+		public override float ReloadStartTime => 0.5f;
 
 		public override void Spawn()
 		{
@@ -43,7 +41,7 @@ namespace Sandbox
 			(Owner as AnimEntity)?.SetAnimBool( "b_attack", true );
 
 			Particles.Create( "particles/pistol_muzzleflash.vpcf", EffectEntity, "muzzle" );
-			ShootEffects();
+			ShootEffects( shakeSize: 15.0f, shakeLength: 0.8 );
 			PlaySound( "cs16-weapons-m3-fire" );
 
 			for ( int i = 0; i < 5; i++ )

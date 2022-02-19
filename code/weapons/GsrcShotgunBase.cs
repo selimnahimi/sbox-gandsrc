@@ -9,9 +9,9 @@ namespace Sandbox
 	abstract partial class GsrcShotgunBase : Weapon
 	{
 		public override float ReloadTime => 0.5f;
-		private float ReloadStartTime => 0.5f;
+		public virtual float ReloadStartTime => 0.5f;
 
-		private bool reloadStart = true;
+		protected bool reloadStart = true;
 
 		public override void Simulate( Client owner )
 		{
