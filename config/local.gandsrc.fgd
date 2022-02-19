@@ -68,6 +68,16 @@
 ]
 
 //
+// Sandbox.CS16M3
+//
+@PointClass base(BaseProperties_local_gandsrc) = weapon_m3 : ""
+[
+	enable_shadows(boolean) { group = "Rendering" } : "Shadow Casting" : 1 : "Whether this entity should cast shadows or not"
+
+	input SetColor(string) : "Sets the color of this entity. Format is '255 255 255 255'."
+]
+
+//
 // Sandbox.HL1Crowbar
 //
 @PointClass base(BaseProperties_local_gandsrc) = weapon_crowbar : ""

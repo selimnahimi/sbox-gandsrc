@@ -92,8 +92,8 @@ public partial class Weapon : BaseWeapon, IUse
 	{
 		if ( CurrentMag >= MagSize ) return false;
 
-		// Reload only if firing finished
-		if ( !CanPrimaryTry() || !CanSecondaryTry() ) return false;
+		// Reload only if firing finished, unless the mag is empty
+		if ( ( !CanPrimaryTry() || !CanSecondaryTry() ) && CurrentMag > 0 ) return false;
 
 		return true;
 	}

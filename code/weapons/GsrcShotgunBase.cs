@@ -15,13 +15,22 @@ namespace Sandbox
 
 		public override void Simulate( Client owner )
 		{
-			if ( IsReloading && ((Input.Down( InputButton.Attack1 ) && CanPrimaryAttack()) || Input.Down( InputButton.Attack2 ) && CanSecondaryAttack()) )
+			if ( IsReloading && ((CanPrimaryAttack()) || CanSecondaryAttack()) )
 			{
+				Log.Info( "Shot" );
 				reloadStart = true;
 				IsReloading = false;
 			}
 
 			base.Simulate( owner );
+		}
+
+		public override void AttackPrimary()
+		{
+			base.AttackPrimary();
+
+			reloadStart = true;
+			IsReloading = false;
 		}
 
 		public override void Reload()
