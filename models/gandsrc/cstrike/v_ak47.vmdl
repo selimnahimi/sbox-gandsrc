@@ -58,15 +58,15 @@
 							},
 							{
 								from = "view_finger.vmat"
-								to = "materials/cstrike/v_ak47/view_finger.vmat"
+								to = "materials/cstrike/v_hands/view_finger.vmat"
 							},
 							{
 								from = "view_glove.vmat"
-								to = "materials/cstrike/v_ak47/view_glove.vmat"
+								to = "materials/cstrike/v_hands/view_glove.vmat"
 							},
 							{
 								from = "view_skin.vmat"
-								to = "materials/cstrike/v_ak47/view_skin.vmat"
+								to = "materials/cstrike/v_hands/view_skin.vmat"
 							},
 							{
 								from = "wood.vmat"
