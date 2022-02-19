@@ -8,6 +8,7 @@ public partial class Weapon : BaseWeapon, IUse
 
 	[Net]
 	public int CurrentMag { get; set; }
+	public virtual string DryFireSound { get; set; } = "hl1-weapons-click";
 
 	//public virtual AmmoType AmmoType => new AmmoType();
 
@@ -56,7 +57,7 @@ public partial class Weapon : BaseWeapon, IUse
 		if (base.CanPrimaryAttack() && CurrentMag <= 0)
 		{
 			TimeSincePrimaryAttack = 0;
-			PlaySound( "hl1-weapons-click" );
+			PlaySound( DryFireSound );
 		}
 
 		return CurrentMag > 0 && base.CanPrimaryAttack();

@@ -14,6 +14,7 @@ namespace Sandbox
 		public override float SecondaryRate => 1.0f;
 		public override float ReloadTime => 3.0f;
 		public override int MagSize { get; set; } = 30;
+		public override string DryFireSound { get; set; } = "cs16-weapons-click";
 
 		private Sound grenadeSound;
 
