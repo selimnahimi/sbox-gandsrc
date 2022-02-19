@@ -90,6 +90,8 @@ public partial class Weapon : BaseWeapon, IUse
 
 	public override void Reload()
 	{
+		if ( CurrentMag >= MagSize ) return;
+
 		if ( !CanPrimaryTry() || !CanSecondaryTry() ) return;
 
 		if ( IsReloading )
