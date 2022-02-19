@@ -51,6 +51,7 @@ namespace Sandbox
 			Inventory.Add( new HL1Python() );
 			Inventory.Add( new HL1MP5() );
 			Inventory.Add( new HL1Shotgun() );
+			Inventory.Add( new CS16AK47() );
 
 			Armor = 0;
 			MaxArmor = 100;

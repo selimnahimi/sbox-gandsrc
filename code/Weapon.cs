@@ -22,6 +22,8 @@ public partial class Weapon : BaseWeapon, IUse
 	[Net, Predicted]
 	public TimeSince TimeSinceDeployed { get; set; }
 
+	private Sound fireSound;
+
 	public override void Spawn()
 	{
 		base.Spawn();
@@ -48,6 +50,12 @@ public partial class Weapon : BaseWeapon, IUse
 		}
 
 		return CurrentMag > 0 && base.CanPrimaryAttack();
+	}
+
+	public virtual void PlayFireSound(string soundFile)
+	{
+		fireSound.Stop();
+		fireSound = PlaySound( soundFile );
 	}
 
 	public override void AttackPrimary()
