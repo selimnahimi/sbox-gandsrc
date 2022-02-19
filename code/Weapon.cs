@@ -88,11 +88,19 @@ public partial class Weapon : BaseWeapon, IUse
 		IsReloading = false;
 	}
 
+	public virtual bool CanReloadTry()
+	{
+		if ( CurrentMag >= MagSize ) return false;
+
+		// Reload only if firing finished
+		if ( !CanPrimaryTry() || !CanSecondaryTry() ) return false;
+
+		return true;
+	}
+
 	public override void Reload()
 	{
-		if ( CurrentMag >= MagSize ) return;
-
-		if ( !CanPrimaryTry() || !CanSecondaryTry() ) return;
+		if ( !CanReloadTry() ) return;
 
 		if ( IsReloading )
 			return;
