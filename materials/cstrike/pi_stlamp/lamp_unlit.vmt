@@ -1,0 +1,5 @@
+"LightmappedGeneric"
+{
+	"$basetexture" "cstrike/pi_stlamp/lamp_unlit"
+	"$translucent" 1
+}

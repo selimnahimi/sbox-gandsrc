@@ -1,0 +1,5 @@
+"LightmappedGeneric"
+{
+	"$basetexture" "cstrike/v_awp/view_skin"
+	"$translucent" 1
+}

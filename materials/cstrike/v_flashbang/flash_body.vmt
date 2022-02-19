@@ -1,0 +1,5 @@
+"LightmappedGeneric"
+{
+	"$basetexture" "cstrike/v_flashbang/flash_body"
+	"$translucent" 1
+}

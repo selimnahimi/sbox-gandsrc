@@ -1,0 +1,5 @@
+"LightmappedGeneric"
+{
+	"$basetexture" "cstrike/v_scout/scope_clamps"
+	"$translucent" 1
+}

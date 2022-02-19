@@ -1,0 +1,10 @@
+// Converted with vmt_to_vmat.py
+
+Layer0
+{
+	shader "vr_complex.vfx"
+
+	TextureColor "materials\cstrike\head\Face-Unwrap1_color.tga"
+	F_TRANSLUCENT 1
+	TextureTranslucency "materials\cstrike\head\Face-Unwrap1_trans.tga"
+}

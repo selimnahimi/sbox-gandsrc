@@ -1,0 +1,5 @@
+"LightmappedGeneric"
+{
+	"$basetexture" "cstrike/shield/v_shield_deagle/DE_handle"
+	"$translucent" 1
+}

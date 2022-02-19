@@ -1,0 +1,5 @@
+"LightmappedGeneric"
+{
+	"$basetexture" "cstrike/shield/p_shield_knife/handle_top"
+	"$translucent" 1
+}

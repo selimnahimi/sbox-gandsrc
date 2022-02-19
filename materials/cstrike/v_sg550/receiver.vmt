@@ -1,0 +1,5 @@
+"LightmappedGeneric"
+{
+	"$basetexture" "cstrike/v_sg550/receiver"
+	"$translucent" 1
+}

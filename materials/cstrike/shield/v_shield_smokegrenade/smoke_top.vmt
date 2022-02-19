@@ -1,0 +1,5 @@
+"LightmappedGeneric"
+{
+	"$basetexture" "cstrike/shield/v_shield_smokegrenade/smoke_top"
+	"$translucent" 1
+}

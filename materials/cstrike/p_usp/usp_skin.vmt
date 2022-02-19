@@ -1,0 +1,5 @@
+"LightmappedGeneric"
+{
+	"$basetexture" "cstrike/p_usp/usp_skin"
+	"$translucent" 1
+}

@@ -1,0 +1,5 @@
+"LightmappedGeneric"
+{
+	"$basetexture" "cstrike/w_ump45/ump_profile"
+	"$translucent" 1
+}

@@ -1,0 +1,5 @@
+"LightmappedGeneric"
+{
+	"$basetexture" "cstrike/v_hegrenade/he_top"
+	"$translucent" 1
+}

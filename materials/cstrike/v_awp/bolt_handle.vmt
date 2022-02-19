@@ -1,0 +1,5 @@
+"LightmappedGeneric"
+{
+	"$basetexture" "cstrike/v_awp/bolt_handle"
+	"$translucent" 1
+}

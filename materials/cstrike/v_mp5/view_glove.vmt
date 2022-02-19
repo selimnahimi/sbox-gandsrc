@@ -1,0 +1,5 @@
+"LightmappedGeneric"
+{
+	"$basetexture" "cstrike/v_mp5/view_glove"
+	"$translucent" 1
+}

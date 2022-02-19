@@ -1,0 +1,5 @@
+"LightmappedGeneric"
+{
+	"$basetexture" "cstrike/v_awp/barrel"
+	"$translucent" 1
+}

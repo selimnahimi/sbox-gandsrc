@@ -1,0 +1,5 @@
+"LightmappedGeneric"
+{
+	"$basetexture" "cstrike/p_knife/pknifeskin"
+	"$translucent" 1
+}

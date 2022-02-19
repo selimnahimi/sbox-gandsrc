@@ -1,0 +1,5 @@
+"LightmappedGeneric"
+{
+	"$basetexture" "cstrike/player/guerilla/guerilla/GUERILLA_DMBASE"
+	"$translucent" 1
+}

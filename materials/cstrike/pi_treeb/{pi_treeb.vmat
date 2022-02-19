@@ -1,0 +1,10 @@
+// Converted with vmt_to_vmat.py
+
+Layer0
+{
+	shader "vr_complex.vfx"
+
+	TextureColor "materials\cstrike\pi_treeb\{pi_treeb_color.tga"
+	F_TRANSLUCENT 1
+	TextureTranslucency "materials\cstrike\pi_treeb\{pi_treeb_trans.tga"
+}

@@ -1,0 +1,5 @@
+"LightmappedGeneric"
+{
+	"$basetexture" "cstrike/v_ak47/view_finger"
+	"$translucent" 1
+}

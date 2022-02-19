@@ -1,0 +1,5 @@
+"LightmappedGeneric"
+{
+	"$basetexture" "cstrike/v_usp/silencer"
+	"$translucent" 1
+}

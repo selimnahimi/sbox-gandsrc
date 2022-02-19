@@ -1,0 +1,5 @@
+"LightmappedGeneric"
+{
+	"$basetexture" "cstrike/player/sas/sas/SAS_DMBASE1"
+	"$translucent" 1
+}

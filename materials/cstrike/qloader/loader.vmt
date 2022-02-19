@@ -1,0 +1,5 @@
+"LightmappedGeneric"
+{
+	"$basetexture" "cstrike/qloader/loader"
+	"$translucent" 1
+}

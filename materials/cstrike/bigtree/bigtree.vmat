@@ -1,0 +1,10 @@
+// Converted with vmt_to_vmat.py
+
+Layer0
+{
+	shader "vr_complex.vfx"
+
+	TextureColor "materials\cstrike\bigtree\bigtree_color.tga"
+	F_TRANSLUCENT 1
+	TextureTranslucency "materials\cstrike\bigtree\bigtree_trans.tga"
+}

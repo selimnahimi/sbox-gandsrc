@@ -1,0 +1,5 @@
+"LightmappedGeneric"
+{
+	"$basetexture" "cstrike/player/GIGN_DMBASE2"
+	"$translucent" 1
+}

@@ -1,0 +1,5 @@
+"LightmappedGeneric"
+{
+	"$basetexture" "cstrike/player/vip/vip/head2"
+	"$translucent" 1
+}

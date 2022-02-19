@@ -1,0 +1,5 @@
+"LightmappedGeneric"
+{
+	"$basetexture" "cstrike/pi_tree2/trunkhshadow"
+	"$translucent" 1
+}

@@ -1,0 +1,5 @@
+"LightmappedGeneric"
+{
+	"$basetexture" "cstrike/v_c4/c4buttons"
+	"$translucent" 1
+}

@@ -1,0 +1,5 @@
+"LightmappedGeneric"
+{
+	"$basetexture" "cstrike/shield/v_shield_flashbang/flash_spoon"
+	"$translucent" 1
+}

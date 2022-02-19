@@ -1,0 +1,5 @@
+"LightmappedGeneric"
+{
+	"$basetexture" "cstrike/v_awp/buttstock"
+	"$translucent" 1
+}

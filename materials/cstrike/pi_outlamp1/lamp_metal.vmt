@@ -1,0 +1,5 @@
+"LightmappedGeneric"
+{
+	"$basetexture" "cstrike/pi_outlamp1/lamp_metal"
+	"$translucent" 1
+}

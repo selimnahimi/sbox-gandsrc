@@ -1,0 +1,5 @@
+"LightmappedGeneric"
+{
+	"$basetexture" "cstrike/p_elite/w_elite"
+	"$translucent" 1
+}

@@ -1,0 +1,5 @@
+"LightmappedGeneric"
+{
+	"$basetexture" "cstrike/p_glock18/w_glock18"
+	"$translucent" 1
+}

@@ -1,0 +1,5 @@
+"LightmappedGeneric"
+{
+	"$basetexture" "cstrike/player/sas/sas/Backpack2"
+	"$translucent" 1
+}

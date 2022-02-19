@@ -1,0 +1,5 @@
+"LightmappedGeneric"
+{
+	"$basetexture" "cstrike/pshell/pistol_goldshell"
+	"$translucent" 1
+}

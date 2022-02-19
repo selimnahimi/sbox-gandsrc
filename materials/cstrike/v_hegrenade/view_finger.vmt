@@ -1,0 +1,5 @@
+"LightmappedGeneric"
+{
+	"$basetexture" "cstrike/v_hegrenade/view_finger"
+	"$translucent" 1
+}

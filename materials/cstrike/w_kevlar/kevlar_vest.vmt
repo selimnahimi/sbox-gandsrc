@@ -1,0 +1,5 @@
+"LightmappedGeneric"
+{
+	"$basetexture" "cstrike/w_kevlar/kevlar_vest"
+	"$translucent" 1
+}

@@ -1,0 +1,5 @@
+"LightmappedGeneric"
+{
+	"$basetexture" "cstrike/v_mp5/rearsight"
+	"$translucent" 1
+}
