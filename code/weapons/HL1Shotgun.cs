@@ -34,10 +34,7 @@ namespace Sandbox
 		public override bool CanSecondaryAttack()
 		{
 			// Only fire after primary has ended
-			if ( TimeSincePrimaryAttack <= (1 / PrimaryRate) )
-			{
-				return false;
-			}
+			if ( !CanPrimaryTry() ) return false;
 
 			return base.CanSecondaryAttack() && Input.Down( InputButton.Attack2 ) && CurrentMag > 1;
 		}
@@ -88,12 +85,13 @@ namespace Sandbox
 				IsReloading = false;
 			}
 
-
 			base.Simulate( owner );
 		}
 
 		public override void Reload()
 		{
+			if ( !CanPrimaryTry() || !CanSecondaryTry() ) return;
+
 			if ( CurrentMag >= MagSize ) return;
 
 			if ( reloadStart )

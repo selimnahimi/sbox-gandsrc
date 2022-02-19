@@ -41,6 +41,16 @@ public partial class Weapon : BaseWeapon, IUse
 		CurrentMag = MagSize;
 	}
 
+	public virtual bool CanPrimaryTry()
+	{
+		return TimeSincePrimaryAttack > (1 / PrimaryRate);
+	}
+
+	public virtual bool CanSecondaryTry()
+	{
+		return TimeSinceSecondaryAttack > (1 / SecondaryRate);
+	}
+
 	public override bool CanPrimaryAttack()
 	{
 		if (base.CanPrimaryAttack() && CurrentMag <= 0)
@@ -79,6 +89,8 @@ public partial class Weapon : BaseWeapon, IUse
 
 	public override void Reload()
 	{
+		if ( !CanPrimaryTry() || !CanSecondaryTry() ) return;
+
 		if ( IsReloading )
 			return;
 
