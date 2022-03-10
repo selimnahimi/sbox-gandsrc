@@ -39,19 +39,19 @@ namespace Sandbox
 
 			base.Reload();
 
-			ViewModelEntity?.SetAnimBool( "reload_finish", false );
+			ViewModelEntity?.SetAnimParameter( "reload_finish", false );
 
 			if ( reloadStart )
 			{
 				Log.Info( "reload start" );
 				TimeSinceReload = 0;
-				ViewModelEntity?.SetAnimBool( "reload_start", true );
+				ViewModelEntity?.SetAnimParameter( "reload_start", true );
 				reloadStart = false;
 			}
 			else
 			{
 				CurrentMag += 1;
-				ViewModelEntity?.SetAnimBool( "reload_start", false );
+				ViewModelEntity?.SetAnimParameter( "reload_start", false );
 			}
 
 			reloadStart = false;
@@ -64,7 +64,7 @@ namespace Sandbox
 			if ( CurrentMag >= MagSize )
 			{
 				reloadStart = true;
-				ViewModelEntity?.SetAnimBool( "reload_finish", true );
+				ViewModelEntity?.SetAnimParameter( "reload_finish", true );
 				return;
 			}
 
@@ -73,9 +73,9 @@ namespace Sandbox
 
 		public override void SimulateAnimator( PawnAnimator anim )
 		{
-			anim.SetParam( "holdtype", 3 );
-			anim.SetParam( "aimat_weight", 1.0f );
-			anim.SetParam( "holdtype_handedness", 0 );
+			anim.SetAnimParameter( "holdtype", 3 );
+			anim.SetAnimParameter( "aimat_weight", 1.0f );
+			anim.SetAnimParameter( "holdtype_handedness", 0 );
 		}
 	}
 

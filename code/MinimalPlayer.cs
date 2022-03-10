@@ -39,7 +39,7 @@ namespace Sandbox
 			//
 			// Use ThirdPersonCamera (you can make your own Camera for 100% control)
 			//
-			Camera = new FirstPersonCamera();
+			CameraMode = new FirstPersonCamera();
 
 			EnableAllCollisions = true;
 			EnableDrawing = true;
@@ -57,7 +57,7 @@ namespace Sandbox
 			Armor = 0;
 			MaxArmor = 100;
 
-			SetAnimBool( "b_dead", false );
+			SetAnimParameter( "b_dead", false );
 
 			base.Respawn();
 		}
@@ -95,18 +95,18 @@ namespace Sandbox
 				ragdoll.PhysicsGroup.Velocity = EyeRot.Forward * 1000;*/
 
 				var battery = new HL1Battery();
-				battery.Position = EyePos + EyeRot.Forward * 40;
+				battery.Position = EyePosition + EyeRotation.Forward * 40;
 			}
 
 			if ( Input.Pressed( InputButton.View ) )
 			{
-				if ( Camera is not FirstPersonCamera )
+				if ( CameraMode is not FirstPersonCamera )
 				{
-					Camera = new FirstPersonCamera();
+					CameraMode = new FirstPersonCamera();
 				}
 				else
 				{
-					Camera = new ThirdPersonCamera();
+					CameraMode = new ThirdPersonCamera();
 				}
 			}
 		}
@@ -156,7 +156,7 @@ namespace Sandbox
 			DeathSound = PlaySound( "hl1-fvox-death" );
 
 			EnableAllCollisions = false;
-			SetAnimBool( "b_dead", true );
+			SetAnimParameter( "b_dead", true );
 			// EnableDrawing = false;
 
 			Inventory.DropActive();
@@ -167,7 +167,7 @@ namespace Sandbox
 		[ServerCmd( "inventory_current" )]
 		public static void SetInventoryCurrent( string entName )
 		{
-			var target = ConsoleSystem.Caller.Pawn;
+			var target = ConsoleSystem.Caller.Pawn as Player;
 			if ( target == null ) return;
 
 			var inventory = target.Inventory;

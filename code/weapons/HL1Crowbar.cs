@@ -38,7 +38,7 @@ namespace Sandbox
 			TimeSincePrimaryAttack = 0;
 			TimeSinceSecondaryAttack = 0;
 
-			(Owner as AnimEntity)?.SetAnimBool( "b_attack", true );
+			(Owner as AnimEntity)?.SetAnimParameter( "b_attack", true );
 
 			bool hitWall = HitWall();
 
@@ -58,9 +58,9 @@ namespace Sandbox
 
 		public override void SimulateAnimator( PawnAnimator anim )
 		{
-			anim.SetParam( "holdtype", 6 );
-			anim.SetParam( "aimat_weight", 1.0f );
-			anim.SetParam( "holdtype_handedness", 0 );
+			anim.SetAnimParameter( "holdtype", 6 );
+			anim.SetAnimParameter( "aimat_weight", 1.0f );
+			anim.SetAnimParameter( "holdtype_handedness", 0 );
 		}
 	}
 

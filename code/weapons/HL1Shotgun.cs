@@ -14,8 +14,6 @@ namespace Sandbox
 		public override float SecondaryRate => 0.6f;
 		public override float ReloadTime => 0.5f;
 		public override int MagSize { get; set; } = 8;
-		private bool reloadStart = true;
-		private float ReloadStartTime => 0.5f;
 
 		public TimeSince TimeSinceDischarge { get; set; }
 
@@ -40,7 +38,7 @@ namespace Sandbox
 
 			TimeSincePrimaryAttack = 0;
 
-			(Owner as AnimEntity)?.SetAnimBool( "b_attack", true );
+			(Owner as AnimEntity)?.SetAnimParameter( "b_attack", true );
 
 			Particles.Create( "particles/pistol_muzzleflash.vpcf", EffectEntity, "muzzle" );
 			ShootEffects();
@@ -79,9 +77,9 @@ namespace Sandbox
 
 		public override void SimulateAnimator( PawnAnimator anim )
 		{
-			anim.SetParam( "holdtype", 3 );
-			anim.SetParam( "aimat_weight", 1.0f );
-			anim.SetParam( "holdtype_handedness", 0 );
+			anim.SetAnimParameter( "holdtype", 3 );
+			anim.SetAnimParameter( "aimat_weight", 1.0f );
+			anim.SetAnimParameter( "holdtype_handedness", 0 );
 		}
 	}
 

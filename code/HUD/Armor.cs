@@ -18,7 +18,7 @@ public class Armor : Panel
 
 	public override void Tick()
 	{
-		var pawn = Local.Pawn;
+		var pawn = Local.Pawn as Player;
 		if ( pawn == null ) return;
 
 		int barheight = 50;

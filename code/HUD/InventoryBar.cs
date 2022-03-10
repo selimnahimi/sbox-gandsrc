@@ -19,7 +19,7 @@ public class InventoryBar : Panel
 	{
 		base.Tick();
 
-		var player = Local.Pawn;
+		var player = Local.Pawn as Player;
 		if ( player == null ) return;
 		if ( player.Inventory == null ) return;
 
@@ -31,6 +31,8 @@ public class InventoryBar : Panel
 
 	private static void UpdateIcon( Entity ent, InventoryIcon inventoryIcon, int i )
 	{
+		var player = Local.Pawn as Player;
+
 		if ( ent == null )
 		{
 			inventoryIcon.Clear();
@@ -39,7 +41,7 @@ public class InventoryBar : Panel
 
 		inventoryIcon.TargetEnt = ent;
 		inventoryIcon.Label.Text = ent.ClassInfo.Title;
-		inventoryIcon.SetClass( "active", ent.IsActiveChild() );
+		inventoryIcon.SetClass( "active", player.ActiveChild == ent );
 	}
 
 	[Event( "buildinput" )]
@@ -68,7 +70,8 @@ public class InventoryBar : Panel
 
 	private static void SetActiveSlot( InputBuilder input, IBaseInventory inventory, int i )
 	{
-		var player = Local.Pawn;
+		var player = Local.Pawn as Player;
+
 		if ( player == null )
 			return;
 
@@ -78,8 +81,6 @@ public class InventoryBar : Panel
 
 		if ( ent == null )
 			return;
-
-		player.PlaySound( "hl1-common-wpn_hudoff" );
 
 		input.ActiveChild = ent;
 	}

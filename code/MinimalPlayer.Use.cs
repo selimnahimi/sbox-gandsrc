@@ -28,7 +28,7 @@ namespace Sandbox
 				return null;
 
 			// First try a direct 0 width line
-			var tr = Trace.Ray( EyePos, EyePos + EyeRot.Forward * (85 * Scale) )
+			var tr = Trace.Ray( EyePosition, EyePosition + EyeRotation.Forward * (85 * Scale) )
 				.HitLayer( CollisionLayer.Debris )
 				.Ignore( this )
 				.Run();
@@ -43,7 +43,7 @@ namespace Sandbox
 			// Nothing found, try a wider search
 			if ( !IsValidUseEntity( ent ) )
 			{
-				tr = Trace.Ray( EyePos, EyePos + EyeRot.Forward * (85 * Scale) )
+				tr = Trace.Ray( EyePosition, EyePosition + EyeRotation.Forward * (85 * Scale) )
 				.Radius( 2 )
 				.HitLayer( CollisionLayer.Debris )
 				.Ignore( this )

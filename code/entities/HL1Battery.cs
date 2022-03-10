@@ -25,7 +25,7 @@ namespace Sandbox
 				EnableSelfCollisions = false
 			};
 
-			PickupTrigger.PhysicsBody.EnableAutoSleeping = false;
+			PickupTrigger.PhysicsBody.AutoSleep = false;
 		}
 
 		public override void StartTouch( Entity other )

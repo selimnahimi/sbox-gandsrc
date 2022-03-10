@@ -38,7 +38,7 @@ namespace Sandbox
 
 			TimeSincePrimaryAttack = 0;
 
-			(Owner as AnimEntity)?.SetAnimBool( "b_attack", true );
+			(Owner as AnimEntity)?.SetAnimParameter( "b_attack", true );
 
 			Particles.Create( "particles/pistol_muzzleflash.vpcf", EffectEntity, "muzzle" );
 			ShootEffects( shakeSize: 15.0f, shakeLength: 0.8 );
@@ -61,9 +61,9 @@ namespace Sandbox
 
 		public override void SimulateAnimator( PawnAnimator anim )
 		{
-			anim.SetParam( "holdtype", 3 );
-			anim.SetParam( "aimat_weight", 1.0f );
-			anim.SetParam( "holdtype_handedness", 0 );
+			anim.SetAnimParameter( "holdtype", 3 );
+			anim.SetAnimParameter( "aimat_weight", 3 );
+			anim.SetAnimParameter( "holdtype_handedness", 3 );
 		}
 	}
 

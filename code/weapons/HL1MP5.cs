@@ -37,7 +37,7 @@ namespace Sandbox
 
 			TimeSincePrimaryAttack = 0;
 
-			(Owner as AnimEntity)?.SetAnimBool( "b_attack", true );
+			(Owner as AnimEntity)?.SetAnimParameter( "b_attack", true );
 
 			Particles.Create( "particles/pistol_muzzleflash.vpcf", EffectEntity, "muzzle" );
 			ShootEffects();
@@ -53,10 +53,10 @@ namespace Sandbox
 			{
 				var grenade = new HL1MP5Grenade();
 
-				grenade.Rotation = Rotation.LookAt(Owner.EyeRot.Forward);
+				grenade.Rotation = Rotation.LookAt(Owner.EyeRotation.Forward);
 				grenade.SetupPhysicsFromModel( PhysicsMotionType.Dynamic, false );
-				grenade.PhysicsGroup.Velocity = Owner.EyeRot.Forward * 1000;
-				grenade.Position = Owner.EyePos + Owner.EyeRot.Forward * 40;
+				grenade.PhysicsGroup.Velocity = Owner.EyeRotation.Forward * 1000;
+				grenade.Position = Owner.EyePosition + Owner.EyeRotation.Forward * 40;
 
 				//grenade.ApplyAbsoluteImpulse( grenade.Rotation.Up * 200.0f );
 				grenade.ApplyLocalAngularImpulse( new Vector3(500,0,0) );
@@ -70,9 +70,9 @@ namespace Sandbox
 
 		public override void SimulateAnimator( PawnAnimator anim )
 		{
-			anim.SetParam( "holdtype", 2 );
-			anim.SetParam( "aimat_weight", 1.0f );
-			anim.SetParam( "holdtype_handedness", 0 );
+			anim.SetAnimParameter( "holdtype", 2 );
+			anim.SetAnimParameter( "aimat_weight", 1.0f );
+			anim.SetAnimParameter( "holdtype_handedness", 0 );
 		}
 	}
 

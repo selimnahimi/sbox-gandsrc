@@ -12,7 +12,7 @@ namespace Sandbox
 
 		public virtual bool HitWall()
 		{
-			var tr = Trace.Ray( Owner.EyePos, Owner.EyePos + Owner.EyeRot.Forward * Range )
+			var tr = Trace.Ray( Owner.EyePosition, Owner.EyePosition + Owner.EyeRotation.Forward * Range )
 				.Radius( 1 )
 				.Ignore( this )
 				.WorldAndEntities()
@@ -33,7 +33,7 @@ namespace Sandbox
 				_ = new Sandbox.ScreenShake.GoldSrcShake();
 			}
 
-			ViewModelEntity?.SetAnimBool( hit ? "fire" : "fire_miss", true );
+			ViewModelEntity?.SetAnimParameter( hit ? "fire" : "fire_miss", true );
 
 			CrosshairPanel?.CreateEvent( "fire" );
 		}
