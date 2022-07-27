@@ -108,7 +108,7 @@ public partial class Weapon : BaseWeapon, IUse
 		TimeSinceReload = 0;
 		IsReloading = true;
 
-		(Owner as AnimEntity)?.SetAnimParameter( "b_reload", true );
+		(Owner as AnimatedEntity)?.SetAnimParameter( "b_reload", true );
 
 		StartReloadEffects();
 	}
@@ -155,8 +155,8 @@ public partial class Weapon : BaseWeapon, IUse
 		{
 			Position = Position,
 			Owner = Owner,
-			EnableViewmodelRendering = true,
-			FieldOfView = FieldOfView
+			EnableViewmodelRendering = true
+			// FieldOfView = FieldOfView
 		};
 
 		ViewModelEntity.SetModel( ViewModelPath );
@@ -206,7 +206,7 @@ public partial class Weapon : BaseWeapon, IUse
 		}
 
 		ViewModelEntity?.SetAnimParameter( anim, true );
-		CrosshairPanel?.CreateEvent( "fire" );
+		// Crosshair?.CreateEvent( "fire" );
 	}
 
 	/// <summary>

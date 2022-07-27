@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Sandbox
 {
-	[Library( "weapon_m3", Title = "Counter-Strike 1.6 Benelli M3", Spawnable = true )]
+	[Library( "weapon_m3", Title = "Counter-Strike 1.6 Benelli M3" )]
 	partial class CS16M3 : GsrcShotgunBase
 	{
 		public override float FieldOfView => 70.0f;
@@ -29,7 +29,7 @@ namespace Sandbox
 			// Only fire after primary has ended
 			if ( !CanPrimaryTry() ) return false;
 
-			return base.CanSecondaryAttack() && Input.Down( InputButton.Attack2 ) && CurrentMag > 1;
+			return base.CanSecondaryAttack() && Input.Down( InputButton.SecondaryAttack ) && CurrentMag > 1;
 		}
 
 		public override void AttackPrimary()
@@ -38,7 +38,7 @@ namespace Sandbox
 
 			TimeSincePrimaryAttack = 0;
 
-			(Owner as AnimEntity)?.SetAnimParameter( "b_attack", true );
+			(Owner as AnimatedEntity)?.SetAnimParameter( "b_attack", true );
 
 			Particles.Create( "particles/pistol_muzzleflash.vpcf", EffectEntity, "muzzle" );
 			ShootEffects( shakeSize: 15.0f, shakeLength: 0.8 );

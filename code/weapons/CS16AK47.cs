@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Sandbox
 {
-	[Library( "weapon_ak47", Title = "Counter-Strike 1.6 AK-47", Spawnable = true )]
+	[Library( "weapon_ak47", Title = "Counter-Strike 1.6 AK-47" )]
 	partial class CS16AK47 : Weapon
 	{
 		public override float FieldOfView => 70.0f;
@@ -30,7 +30,7 @@ namespace Sandbox
 
 		public override bool CanPrimaryAttack()
 		{
-			return base.CanPrimaryAttack() && Input.Down( InputButton.Attack1 );
+			return base.CanPrimaryAttack() && Input.Down( InputButton.PrimaryAttack );
 		}
 
 		public override void AttackPrimary()
@@ -39,7 +39,7 @@ namespace Sandbox
 
 			TimeSincePrimaryAttack = 0;
 
-			(Owner as AnimEntity)?.SetAnimParameter( "b_attack", true );
+			(Owner as AnimatedEntity)?.SetAnimParameter( "b_attack", true );
 
 			Particles.Create( "particles/pistol_muzzleflash.vpcf", EffectEntity, "muzzle" );
 			ShootEffects();

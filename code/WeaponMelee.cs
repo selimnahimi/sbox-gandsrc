@@ -35,7 +35,7 @@ namespace Sandbox
 
 			ViewModelEntity?.SetAnimParameter( hit ? "fire" : "fire_miss", true );
 
-			CrosshairPanel?.CreateEvent( "fire" );
+			// CrosshairPanel?.CreateEvent( "fire" );
 		}
 	}
 }

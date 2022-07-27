@@ -11,8 +11,8 @@ public partial class SandboxHud : HudEntity<RootPanel>
 
 		RootPanel.StyleSheet.Load( "/HUD/SandboxHud.scss" );
 
-		RootPanel.AddChild<NameTags>();
-		RootPanel.AddChild<CrosshairCanvas>();
+		// RootPanel.AddChild<NameTags>();
+		RootPanel.AddChild<Crosshair>();
 		RootPanel.AddChild<ChatBox>();
 		RootPanel.AddChild<VoiceList>();
 		RootPanel.AddChild<KillFeed>();

@@ -6,8 +6,8 @@ using System.Threading.Tasks;
 
 namespace Sandbox
 {
-	[Library( "ent_mp5_grenade_live", Title = "Half-Life 1 MP5 Grenade (live)", Spawnable = false )]
-	partial class HL1MP5Grenade : AnimEntity
+	[Library( "ent_mp5_grenade_live", Title = "Half-Life 1 MP5 Grenade (live)" )]
+	partial class HL1MP5Grenade : AnimatedEntity
 	{
 		public PickupTrigger PickupTrigger { get; protected set; }
 

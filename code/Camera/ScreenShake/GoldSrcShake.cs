@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Sandbox.ScreenShake
 {
-	internal class GoldSrcShake : CameraModifier
+	internal class GoldSrcShake : CameraMode
 	{
 		float Length;
 		float Speed;
@@ -28,7 +28,7 @@ namespace Sandbox.ScreenShake
 			pos = Rand.Float( 0, 100000 );
 		}
 
-		public override bool Update( ref CameraSetup cam )
+		/* public override bool Update( ref CameraSetup cam )
 		{
 			var delta = ((float)lifeTime).LerpInverse( 0, Length, true );
 			delta = Easing.Linear( delta );
@@ -45,6 +45,23 @@ namespace Sandbox.ScreenShake
 			cam.Rotation *= Rotation.FromAxis( Vector3.Right, Size * invdelta * RotationAmount );
 
 			return lifeTime < Length;
+		} */
+
+		public override void Update()
+		{
+			var delta = ((float)lifeTime).LerpInverse( 0, Length, true );
+			delta = Easing.Linear( delta );
+
+			var invdelta = 1 - delta;
+
+			pos += Time.Delta * 10 * invdelta * Speed;
+
+			//float x = Noise.Perlin( pos, 0, NoiseZ );
+			//float y = Noise.Perlin( pos, 3.0f, NoiseZ );
+
+			//cam.Position += (cam.Rotation.Right * x + cam.Rotation.Up * y) * invdelta * Size;
+			//cam.Rotation *= Rotation.FromAxis( Vector3.Up, x * Size * invdelta * RotationAmount );
+			Rotation *= Rotation.FromAxis( Vector3.Right, Size * invdelta * RotationAmount );
 		}
 	}
 }

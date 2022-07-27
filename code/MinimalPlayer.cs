@@ -164,7 +164,7 @@ namespace Sandbox
 
 		}
 
-		[ServerCmd( "inventory_current" )]
+		[ConCmd.Server( "inventory_current" )]
 		public static void SetInventoryCurrent( string entName )
 		{
 			var target = ConsoleSystem.Caller.Pawn as Player;
@@ -180,7 +180,7 @@ namespace Sandbox
 				if ( !slot.IsValid() )
 					continue;
 
-				if ( !slot.ClassInfo.IsNamed( entName ) )
+				if ( slot.ClassName != entName )
 					continue;
 
 				inventory.SetActiveSlot( i, false );

@@ -6,8 +6,8 @@ using System.Threading.Tasks;
 
 namespace Sandbox
 {
-	[Library( "item_battery", Title = "Half-Life 1 Battery", Spawnable = true )]
-	partial class HL1Battery : AnimEntity
+	[Library( "item_battery", Title = "Half-Life 1 Battery" )]
+	partial class HL1Battery : AnimatedEntity
 	{
 		public PickupTrigger PickupTrigger { get; protected set; }
 

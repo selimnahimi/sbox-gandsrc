@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Sandbox
 {
-	[Library( "func_healthcharger", Title = "Half-Life 1 Health Charger", Spawnable = false )]
+	[Library( "func_healthcharger", Title = "Half-Life 1 Health Charger" )]
 	partial class HealthCharger : BrushEntity, IUse
 	{
 		[Net, Predicted]

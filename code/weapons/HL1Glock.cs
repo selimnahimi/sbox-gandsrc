@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Sandbox
 {
-	[Library( "weapon_glock", Title = "Half-Life 1 Glock 17", Spawnable = true )]
+	[Library( "weapon_glock", Title = "Half-Life 1 Glock 17" )]
 	partial class HL1Glock : Weapon
 	{
 		public override string ViewModelPath => "models/gandsrc/hl1/v_9mmhandgun.vmdl";
@@ -26,12 +26,12 @@ namespace Sandbox
 
 		public override bool CanPrimaryAttack()
 		{
-			return base.CanPrimaryAttack() && Input.Down( InputButton.Attack1 );
+			return base.CanPrimaryAttack() && Input.Down( InputButton.PrimaryAttack );
 		}
 
 		public override bool CanSecondaryAttack()
 		{
-			return base.CanSecondaryAttack() && Input.Down( InputButton.Attack2 ) && CurrentMag > 0;
+			return base.CanSecondaryAttack() && Input.Down( InputButton.SecondaryAttack ) && CurrentMag > 0;
 		}
 
 		public override void AttackPrimary()
@@ -41,7 +41,7 @@ namespace Sandbox
 			TimeSincePrimaryAttack = 0;
 			TimeSinceSecondaryAttack = 0;
 
-			(Owner as AnimEntity)?.SetAnimParameter( "b_attack", true );
+			(Owner as AnimatedEntity)?.SetAnimParameter( "b_attack", true );
 
 			Particles.Create( "particles/pistol_muzzleflash.vpcf", EffectEntity, "muzzle" );
 			ShootEffects();

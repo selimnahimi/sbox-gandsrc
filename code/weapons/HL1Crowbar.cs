@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Sandbox
 {
-	[Library( "weapon_crowbar", Title = "Half-Life 1 Crowbar", Spawnable = true )]
+	[Library( "weapon_crowbar", Title = "Half-Life 1 Crowbar" )]
 	partial class HL1Crowbar : WeaponMelee
 	{
 		public override string ViewModelPath => "models/gandsrc/hl1/v_crowbar.vmdl";
@@ -30,7 +30,7 @@ namespace Sandbox
 
 		public override bool CanPrimaryAttack()
 		{
-			return base.CanPrimaryAttack() && Input.Down( InputButton.Attack1 );
+			return base.CanPrimaryAttack() && Input.Down( InputButton.PrimaryAttack );
 		}
 
 		public override void AttackPrimary()
@@ -38,7 +38,7 @@ namespace Sandbox
 			TimeSincePrimaryAttack = 0;
 			TimeSinceSecondaryAttack = 0;
 
-			(Owner as AnimEntity)?.SetAnimParameter( "b_attack", true );
+			(Owner as AnimatedEntity)?.SetAnimParameter( "b_attack", true );
 
 			bool hitWall = HitWall();
 

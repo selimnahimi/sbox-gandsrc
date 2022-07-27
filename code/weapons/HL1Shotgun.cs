@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Sandbox
 {
-	[Library( "weapon_shotgun", Title = "Half-Life 1 SPAS-12", Spawnable = true )]
+	[Library( "weapon_shotgun", Title = "Half-Life 1 SPAS-12" )]
 	partial class HL1Shotgun : GsrcShotgunBase
 	{
 		public override string ViewModelPath => "models/gandsrc/hl1/v_shotgun.vmdl";
@@ -29,7 +29,7 @@ namespace Sandbox
 			// Only fire after primary has ended
 			if ( !CanPrimaryTry() ) return false;
 
-			return base.CanSecondaryAttack() && Input.Down( InputButton.Attack2 ) && CurrentMag > 1;
+			return base.CanSecondaryAttack() && Input.Down( InputButton.SecondaryAttack ) && CurrentMag > 1;
 		}
 
 		public override void AttackPrimary()
@@ -38,7 +38,7 @@ namespace Sandbox
 
 			TimeSincePrimaryAttack = 0;
 
-			(Owner as AnimEntity)?.SetAnimParameter( "b_attack", true );
+			(Owner as AnimatedEntity)?.SetAnimParameter( "b_attack", true );
 
 			Particles.Create( "particles/pistol_muzzleflash.vpcf", EffectEntity, "muzzle" );
 			ShootEffects();
