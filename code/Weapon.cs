@@ -202,7 +202,8 @@ public partial class Weapon : BaseWeapon, IUse
 
 		if ( IsLocalPawn && shakeSize > 0 )
 		{
-			_ = new Sandbox.ScreenShake.GoldSrcShake( (float)shakeLength, (float)shakeSpeed, (float)shakeSize, (float)shakeRot );
+			Player player = Owner as Player;
+			(player.CameraMode as GoldSrcCamera).Shake( (float)shakeLength, (float)shakeSpeed, (float)shakeSize, (float)shakeRot );
 		}
 
 		ViewModelEntity?.SetAnimParameter( anim, true );

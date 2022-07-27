@@ -39,7 +39,7 @@ namespace Sandbox
 			//
 			// Use ThirdPersonCamera (you can make your own Camera for 100% control)
 			//
-			CameraMode = new FirstPersonCamera();
+			CameraMode = new GoldSrcCamera();
 
 			EnableAllCollisions = true;
 			EnableDrawing = true;
