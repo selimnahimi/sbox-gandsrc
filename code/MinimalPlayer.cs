@@ -100,9 +100,9 @@ namespace Sandbox
 
 			if ( Input.Pressed( InputButton.View ) )
 			{
-				if ( CameraMode is not FirstPersonCamera )
+				if ( CameraMode is not GoldSrcCamera )
 				{
-					CameraMode = new FirstPersonCamera();
+					CameraMode = new GoldSrcCamera();
 				}
 				else
 				{

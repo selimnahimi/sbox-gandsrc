@@ -203,7 +203,11 @@ public partial class Weapon : BaseWeapon, IUse
 		if ( IsLocalPawn && shakeSize > 0 )
 		{
 			Player player = Owner as Player;
-			(player.CameraMode as GoldSrcCamera).Shake( (float)shakeLength, (float)shakeSpeed, (float)shakeSize, (float)shakeRot );
+
+			if ( player.CameraMode is GoldSrcCamera )
+			{
+				(player.CameraMode as GoldSrcCamera).Shake( (float)shakeLength, (float)shakeSpeed, (float)shakeSize, (float)shakeRot );
+			}
 		}
 
 		ViewModelEntity?.SetAnimParameter( anim, true );
