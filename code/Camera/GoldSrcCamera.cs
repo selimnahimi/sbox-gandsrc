@@ -53,11 +53,8 @@ namespace Sandbox
 
 			var invdelta = 1 - delta;
 
-			VerticalRotationAmount *= invdelta;
-			HorizontalRotationAmount *= invdelta;
-
-			Rotation *= Rotation.FromAxis( Vector3.Right, VerticalRotationAmount );
-			Rotation *= Rotation.FromAxis( Vector3.Up, HorizontalRotationAmount );
+			Rotation *= Rotation.FromAxis( Vector3.Right, VerticalRotationAmount * invdelta );
+			Rotation *= Rotation.FromAxis( Vector3.Up, HorizontalRotationAmount * invdelta );
 
 			
 			// Viewbob
@@ -112,7 +109,7 @@ namespace Sandbox
 			// TODO: add shakes together
 			// TODO: shake in every direction, not just vertically
 			Length = length;
-			VerticalRotationAmount += verticalRotation;
+			VerticalRotationAmount = verticalRotation;
 			HorizontalRotationAmount = Rand.Float(-horizontalRotation, horizontalRotation);
 
 			// Reset TimeSince to activate shake
