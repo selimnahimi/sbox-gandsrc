@@ -196,18 +196,15 @@ public partial class Weapon : BaseWeapon, IUse
 	}
 
 	[ClientRpc]
-	protected virtual void ShootEffects(double shakeLength=0.2, double shakeSpeed=1.0, double shakeSize=3.0, double shakeRot=0.6, string anim="fire")
+	protected virtual void ShootEffects(double shakeLength=1.0, double shakeVertRot = 3.0, double shakeHorRot=3.0, string anim="fire")
 	{
 		Host.AssertClient();
 
-		if ( IsLocalPawn && shakeSize > 0 )
+		if ( IsLocalPawn && (shakeVertRot > 0 || shakeHorRot > 0) )
 		{
 			Player player = Owner as Player;
 
-			if ( player.CameraMode is GoldSrcCamera )
-			{
-				(player.CameraMode as GoldSrcCamera).Shake( (float)shakeLength, (float)shakeSpeed, (float)shakeSize, (float)shakeRot );
-			}
+			(player.CameraMode as GoldSrcCamera)?.Shake( (float)shakeLength, (float)shakeVertRot, (float)shakeHorRot );
 		}
 
 		ViewModelEntity?.SetAnimParameter( anim, true );

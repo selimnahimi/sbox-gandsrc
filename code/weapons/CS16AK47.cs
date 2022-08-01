@@ -11,7 +11,7 @@ namespace Sandbox
 	{
 		public override float FieldOfView => 70.0f;
 		public override string ViewModelPath => "models/gandsrc/cstrike/v_ak47.vmdl";
-		public override float PrimaryRate => 10.0f;
+		public override float PrimaryRate => 12.0f;
 		public override float SecondaryRate => 1.0f;
 		public override float ReloadTime => 3.0f;
 		public override int MagSize { get; set; } = 30;
@@ -64,7 +64,7 @@ namespace Sandbox
 				grenade.ApplyLocalAngularImpulse( new Vector3(500,0,0) );
 			}
 
-			ShootEffects( shakeSize: 15.0f, shakeLength: 0.8, anim: "fire_grenade" );
+			ShootEffects( shakeVertRot: 15.0f, shakeLength: 0.8, anim: "fire_grenade" );
 
 			grenadeSound.Stop();
 			grenadeSound = PlaySound( "hl1-weapons-mp5-grenade" );

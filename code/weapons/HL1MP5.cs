@@ -62,7 +62,7 @@ namespace Sandbox
 				grenade.ApplyLocalAngularImpulse( new Vector3(500,0,0) );
 			}
 
-			ShootEffects( shakeSize: 15.0f, shakeLength: 0.8, anim: "fire_grenade" );
+			ShootEffects( shakeVertRot: 15.0f, shakeLength: 0.8, anim: "fire_grenade" );
 
 			grenadeSound.Stop();
 			grenadeSound = PlaySound( "hl1-weapons-mp5-grenade" );

@@ -4,13 +4,10 @@ namespace Sandbox
 	public class GoldSrcCamera : CameraMode
 	{
 		float Length;
-		float Speed;
-		float Size;
-		float RotationAmount;
-		float NoiseZ;
+		float VerticalRotationAmount;
+		float HorizontalRotationAmount;
 
 		TimeSince lifeTime = 0;
-		float pos = 0;
 
 		Vector3 lastPos;
 
@@ -25,9 +22,8 @@ namespace Sandbox
 			lastPos = Position;
 
 			Length = 0.1f;
-			Speed = 1.0f;
-			Size = 3.0f;
-			RotationAmount = 0.6f;
+			VerticalRotationAmount = 0.6f;
+			HorizontalRotationAmount = 0.6f;
 		}
 
 		public override void Update()
@@ -55,21 +51,25 @@ namespace Sandbox
 
 			var invdelta = 1 - delta;
 
-			Position += Time.Delta * 10 * invdelta * Speed;
+			VerticalRotationAmount *= invdelta;
+			HorizontalRotationAmount *= invdelta;
 
-			Rotation *= Rotation.FromAxis( Vector3.Right, Size * invdelta * RotationAmount );
+			//Position += Time.Delta * 10 * invdelta * Speed;
+
+			Rotation *= Rotation.FromAxis( Vector3.Right, VerticalRotationAmount );
+			Rotation *= Rotation.FromAxis( Vector3.Up, HorizontalRotationAmount );
 		}
 
-		public void Shake( float length = 0.1f, float speed = 1.0f, float size = 3.0f, float rotation = 0.6f )
+		public void Shake( float length = 0.1f, float verticalRotation = 0.6f, float horizontalRotation = 0.6f )
 		{
+			// TODO: add shakes together
+			// TODO: shake in every direction, not just vertically
 			Length = length;
-			Speed = speed;
-			Size = size;
-			RotationAmount = rotation;
-			
+			VerticalRotationAmount += verticalRotation;
+			HorizontalRotationAmount = Rand.Float(-horizontalRotation, horizontalRotation);
+
 			// Reset TimeSince to activate shake
 			lifeTime = 0;
-
 		}
 	}
 }

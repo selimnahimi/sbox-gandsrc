@@ -58,7 +58,7 @@ namespace Sandbox
 			TimeSinceSecondaryAttack = 0;
 
 			Particles.Create( "particles/pistol_muzzleflash.vpcf", EffectEntity, "muzzle" );
-			ShootEffects( shakeSize: 15.0f, shakeLength: 0.8, anim: "fire_secondary" );
+			ShootEffects( shakeVertRot: 15.0f, shakeLength: 0.8, anim: "fire_secondary" );
 
 			for ( int i = 0; i < 10; i++ )
 			{
