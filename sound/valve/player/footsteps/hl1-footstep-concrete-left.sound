@@ -2,17 +2,19 @@
 {
 	data = 
 	{
-		ui = false
-		volume = 1.0
-		volumerandom = 0.0
-		pitch = 1.0
-		pitchrandom = 0.0
-		distancemax = 2000.0
-		sounds = 
+		UI = false
+		Volume = 10
+		VolumeRandom = 0
+		Pitch = 1
+		PitchRandom = 0
+		Decibels = 180
+		Sounds = 
 		[
-			"sound/valve/player/pl_step1.vsnd",
-			"sound/valve/player/pl_step2.vsnd",
+			resource:"sound/valve/player/pl_step1.vsnd",
+			resource:"sound/valve/player/pl_step2.vsnd",
 		]
-		selectionmode = "3"
+		SelectionMode = "Random"
+		MaximumDistance = 7384.377
+		MinimumDistance = 369.21884
 	}
 }
