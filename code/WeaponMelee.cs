@@ -28,9 +28,14 @@ namespace Sandbox
 		{
 			Host.AssertClient();
 
-			if ( IsLocalPawn && screenshake )
+			if (IsLocalPawn && screenshake)
 			{
-				_ = new Sandbox.ScreenShake.GoldSrcShake();
+				Player player = Owner as Player;
+
+				if ( player.CameraMode is GoldSrcCamera )
+				{
+					(player.CameraMode as GoldSrcCamera)?.Shake();
+				}
 			}
 
 			ViewModelEntity?.SetAnimParameter( hit ? "fire" : "fire_miss", true );
