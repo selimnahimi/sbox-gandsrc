@@ -3,6 +3,10 @@ using System;
 
 public class ViewModel : BaseViewModel
 {
+	public float FieldOfView { get; set; } = 90.0f;
+	public float OffsetForward { get; set; } = 0f;
+	public float OffsetRight { get; set; } = 0f;
+	public float OffsetUp { get; set; } = 0f;
 	public override void PostCameraSetup( ref CameraSetup camSetup )
 	{
 		base.PostCameraSetup( ref camSetup );
@@ -13,7 +17,7 @@ public class ViewModel : BaseViewModel
 		Position = camSetup.Position;
 		Rotation = camSetup.Rotation;
 
-		// camSetup.ViewModel.FieldOfView = FieldOfView;
+		camSetup.ViewModel.FieldOfView = FieldOfView;
 
 		var playerVelocity = Local.Pawn.Velocity;
 
@@ -61,7 +65,11 @@ public class ViewModel : BaseViewModel
 			bob = -7;
 		}
 
-		Position = Position + Rotation.Forward * bob * .5f - offset * Rotation.Up + new Vector3( 0, 0, offset );
+		Position = Position 
+			+ Rotation.Forward * OffsetForward
+			+ Rotation.Right * OffsetRight
+			+ Rotation.Up * OffsetUp
+			+ Rotation.Forward * bob * .5f - offset * Rotation.Up + new Vector3( 0, 0, offset );
 		Rotation = Rotation;
 	}
 }

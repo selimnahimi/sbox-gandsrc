@@ -3,6 +3,9 @@
 public partial class Weapon : BaseWeapon, IUse
 {
 	public virtual float FieldOfView => 90.0f;
+	public virtual float OffsetForward => 0f;
+	public virtual float OffsetRight => 0f;
+	public virtual float OffsetUp => 0f;
 	public virtual float ReloadTime => 3.0f;
 	public virtual int MagSize { get; set; } = 30;
 
@@ -157,8 +160,11 @@ public partial class Weapon : BaseWeapon, IUse
 		{
 			Position = Position,
 			Owner = Owner,
-			EnableViewmodelRendering = true
-			// FieldOfView = FieldOfView
+			EnableViewmodelRendering = true,
+			OffsetForward = OffsetForward,
+			OffsetRight = OffsetRight,
+			OffsetUp = OffsetUp,
+			FieldOfView = FieldOfView
 		};
 
 		ViewModelEntity.SetModel( ViewModelPath );
