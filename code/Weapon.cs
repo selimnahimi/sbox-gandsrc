@@ -86,6 +86,8 @@ public partial class Weapon : BaseWeapon, IUse
 		TimeSinceDeployed = 0;
 		TimeSinceReload = 0;
 		IsReloading = false;
+
+		ViewModelEntity?.SetAnimParameter( "deploy", true );
 	}
 
 	public virtual bool CanReloadTry()
