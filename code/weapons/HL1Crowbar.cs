@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Sandbox
 {
-	[Library( "weapon_crowbar", Title = "Half-Life 1 Crowbar" )]
+	[Library( "weapon_crowbar", Title = "Crowbar" )]
 	partial class HL1Crowbar : WeaponMelee
 	{
 		public override string ViewModelPath => "models/gandsrc/hl1/v_crowbar.vmdl";

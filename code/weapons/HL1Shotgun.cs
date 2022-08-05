@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Sandbox
 {
-	[Library( "weapon_shotgun", Title = "Half-Life 1 SPAS-12" )]
+	[Library( "weapon_shotgun", Title = "SPAS-12" )]
 	partial class HL1Shotgun : GsrcShotgunBase
 	{
 		public override string ViewModelPath => "models/gandsrc/hl1/v_shotgun.vmdl";

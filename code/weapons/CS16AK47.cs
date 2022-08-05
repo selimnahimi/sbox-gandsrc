@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Sandbox
 {
-	[Library( "weapon_ak47", Title = "Counter-Strike 1.6 AK-47" )]
+	[Library( "weapon_ak47", Title = "AK-47" )]
 	partial class CS16AK47 : Weapon
 	{
 		public override float FieldOfView => 70.0f;

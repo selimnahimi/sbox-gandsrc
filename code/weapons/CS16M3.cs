@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Sandbox
 {
-	[Library( "weapon_m3", Title = "Counter-Strike 1.6 Benelli M3" )]
+	[Library( "weapon_m3", Title = "Benelli M3" )]
 	partial class CS16M3 : GsrcShotgunBase
 	{
 		public override float FieldOfView => 70.0f;
