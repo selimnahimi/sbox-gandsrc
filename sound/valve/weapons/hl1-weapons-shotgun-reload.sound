@@ -2,18 +2,20 @@
 {
 	data = 
 	{
-		ui = false
-		volume = 1.0
-		volumerandom = 0.0
-		pitch = 1.0
-		pitchrandom = 0.0
-		distancemax = 2000.0
-		sounds = 
+		UI = false
+		Volume = 2
+		VolumeRandom = 0
+		Pitch = 1
+		PitchRandom = 0.03
+		Decibels = 70
+		Sounds = 
 		[
-			"sound/valve/weapons/reload1.vsnd",
-			"sound/valve/weapons/reload2.vsnd",
-			"sound/valve/weapons/reload3.vsnd",
+			resource:"sound/valve/weapons/reload1.vsnd",
+			resource:"sound/valve/weapons/reload2.vsnd",
+			resource:"sound/valve/weapons/reload3.vsnd",
 		]
-		selectionmode = "3"
+		SelectionMode = "Random"
+		MaximumDistance = 1143.9335
+		MinimumDistance = 57.196674
 	}
 }

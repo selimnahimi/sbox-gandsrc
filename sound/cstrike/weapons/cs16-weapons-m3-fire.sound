@@ -3,10 +3,10 @@
 	data = 
 	{
 		UI = false
-		Volume = 3
+		Volume = 2
 		VolumeRandom = 0
 		Pitch = 1
-		PitchRandom = 0
+		PitchRandom = 0.03
 		Decibels = 160
 		Sounds = 
 		[
