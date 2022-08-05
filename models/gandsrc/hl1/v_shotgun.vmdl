@@ -19,7 +19,7 @@
 							},
 							{
 								from = "barrelltop.vmat"
-								to = "materials/halflife/barreltop.vmat"
+								to = "materials/models/v_shotgun/barrelltop.vmat"
 							},
 							{
 								from = "bodyback.vmat"
@@ -373,5 +373,6 @@
 		model_archetype = ""
 		primary_associated_entity = ""
 		anim_graph_name = "models/gandsrc/hl1/v_shotgun.vanmgrph"
+		base_model_name = ""
 	}
 }

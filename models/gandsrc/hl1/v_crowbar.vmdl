@@ -310,5 +310,6 @@
 		model_archetype = ""
 		primary_associated_entity = ""
 		anim_graph_name = "models/gandsrc/hl1/v_crowbar.vanmgrph"
+		base_model_name = ""
 	}
 }

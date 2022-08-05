@@ -2899,6 +2899,28 @@
 								root_bone_name = ""
 								motion_type = "Single"
 							},
+							{
+								_class = "AnimEvent"
+								event_class = "AE_FOOTSTEP"
+								event_frame = 0
+								event_keys = 
+								{
+									Attachment = ""
+									Foot = "0"
+									Volume = 1.0
+								}
+							},
+							{
+								_class = "AnimEvent"
+								event_class = "AE_FOOTSTEP"
+								event_frame = 11
+								event_keys = 
+								{
+									Attachment = ""
+									Foot = "1"
+									Volume = 1.0
+								}
+							},
 						]
 						activity_name = ""
 						activity_weight = 1
@@ -3279,5 +3301,6 @@
 		model_archetype = ""
 		primary_associated_entity = ""
 		anim_graph_name = "models/gandsrc/hl1/player/gordon.vanmgrph"
+		base_model_name = ""
 	}
 }

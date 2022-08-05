@@ -31,12 +31,12 @@ Layer0
 	TextureNormal "materials/default/default_normal.tga"
 
 	//---- Roughness ----
-	TextureRoughness "[0.328000 0.328000 0.328000 0.000000]"
+	TextureRoughness "[0.800000 0.800000 0.800000 0.000000]"
 
 	//---- Texture Coordinates ----
 	g_nScaleTexCoordUByModelScaleAxis "0"
 	g_nScaleTexCoordVByModelScaleAxis "0"
-	g_vTexCoordOffset "[0.000 0.000]"
-	g_vTexCoordScale "[1.000 1.000]"
+	g_vTexCoordOffset "[0.204 0.087]"
+	g_vTexCoordScale "[0.800 0.900]"
 	g_vTexCoordScrollSpeed "[0.000 0.000]"
 }
