@@ -14,6 +14,11 @@
 			resource:"sound/cstrike/weapons/ric_conc-2.vsnd",
 			resource:"sound/valve/ambience/_comma.vsnd",
 			resource:"sound/valve/ambience/_comma.vsnd",
+			resource:"sound/valve/weapons/ric1.vsnd",
+			resource:"sound/valve/weapons/ric2.vsnd",
+			resource:"sound/valve/weapons/ric3.vsnd",
+			resource:"sound/valve/weapons/ric4.vsnd",
+			resource:"sound/valve/weapons/ric5.vsnd",
 		]
 		SelectionMode = "Random"
 		MaximumDistance = 2301.2522
