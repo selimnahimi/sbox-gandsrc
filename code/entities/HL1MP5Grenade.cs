@@ -37,6 +37,8 @@ namespace Sandbox
 			if ( other is BaseTrigger ) return;
 
 			ExplosionEntity explosionEntity = new ExplosionEntity();
+			explosionEntity.ParticleOverride = "particles/hl1_explosion.vpcf";
+			explosionEntity.SoundOverride = "explode";
 			explosionEntity.Position = Position;
 			explosionEntity.Explode( other );
 			explosionEntity.Delete();
