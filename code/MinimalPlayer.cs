@@ -28,8 +28,11 @@ namespace Sandbox
 			// Use WalkController for movement (you can make your own PlayerController for 100% control)
 			//
 			Controller = new WalkController();
-			((WalkController)Controller).DefaultSpeed = 275.0f;
-			((WalkController)Controller).Gravity = 900.0f;
+			//((WalkController)Controller).DefaultSpeed = 275.0f;
+			((WalkController)Controller).DefaultSpeed = 350.0f;
+			((WalkController)Controller).Gravity = 1000.0f;
+			((WalkController)Controller).StopSpeed = 110f;
+			((WalkController)Controller).Bounce = 5f;
 
 			//
 			// Use StandardPlayerAnimator  (you can make your own PlayerAnimator for 100% control)
