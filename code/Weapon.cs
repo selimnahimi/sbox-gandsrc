@@ -234,6 +234,8 @@ public partial class Weapon : BaseWeapon, IUse
 		//
 		foreach ( var tr in TraceBullet( pos, pos + forward * 5000, bulletSize ) )
 		{
+			Sound.FromWorld( "ric_conc-1", tr.EndPosition );
+
 			tr.Surface.DoBulletImpact( tr );
 
 			if ( !IsServer ) continue;
