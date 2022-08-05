@@ -59,7 +59,7 @@ namespace Sandbox
 				grenade.Position = Owner.EyePosition + Owner.EyeRotation.Forward * 40;
 
 				//grenade.ApplyAbsoluteImpulse( grenade.Rotation.Up * 200.0f );
-				grenade.ApplyLocalAngularImpulse( new Vector3(500,0,0) );
+				grenade.ApplyLocalAngularImpulse( new Vector3(300,0,0) );
 			}
 
 			ShootEffects( shakeVertRot: 15.0f, shakeLength: 0.8, anim: "fire_grenade" );
