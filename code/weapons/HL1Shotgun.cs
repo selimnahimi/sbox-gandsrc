@@ -10,7 +10,7 @@ namespace Sandbox
 	partial class HL1Shotgun : GsrcShotgunBase
 	{
 		public override string ViewModelPath => "models/gandsrc/hl1/v_shotgun.vmdl";
-		public override float PrimaryRate => 1.0f;
+		public override float PrimaryRate => 1.25f;
 		public override float SecondaryRate => 0.6f;
 		public override float ReloadTime => 0.5f;
 		public override int MagSize { get; set; } = 8;
@@ -42,6 +42,7 @@ namespace Sandbox
 
 			Particles.Create( "particles/pistol_muzzleflash.vpcf", EffectEntity, "muzzle" );
 			ShootEffects();
+
 			PlaySound( "hl1-weapons-shotgun-fire" );
 
 			for ( int i = 0; i < 5; i++ )
