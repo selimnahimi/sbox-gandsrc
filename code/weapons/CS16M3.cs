@@ -40,7 +40,7 @@ namespace Sandbox
 
 			(Owner as AnimatedEntity)?.SetAnimParameter( "b_attack", true );
 
-			Particles.Create( "particles/pistol_muzzleflash.vpcf", EffectEntity, "muzzle" );
+			Particles.Create( "particles/muzzleflash.vpcf", EffectEntity, "muzzle" );
 			ShootEffects( shakeVertRot: 15.0f, shakeLength: 0.8 );
 			PlaySound( "cs16-weapons-m3-fire" );
 

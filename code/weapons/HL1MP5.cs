@@ -39,7 +39,7 @@ namespace Sandbox
 
 			(Owner as AnimatedEntity)?.SetAnimParameter( "b_attack", true );
 
-			Particles.Create( "particles/pistol_muzzleflash.vpcf", EffectEntity, "muzzle" );
+			Particles.Create( "particles/muzzleflash.vpcf", EffectEntity, "muzzle" );
 			ShootEffects();
 			PlaySound( "hl1-weapons-mp5-fire" );
 			ShootBullet( 0.05f, 1.5f, 9.0f, 3.0f );
