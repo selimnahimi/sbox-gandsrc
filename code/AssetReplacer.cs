@@ -6,11 +6,11 @@ using System.Threading.Tasks;
 
 namespace Sandbox
 {
-	internal abstract class SoundReplacer : Entity
+	internal abstract class AssetReplacer : Entity
 	{
 		private static bool initialized = false;
 
-		public SoundReplacer()
+		public AssetReplacer()
 		{
 			string text = IsClient ? "clientside" : "serverside";
 			Logging.GetLogger().Info( $"Sound replacer loaded ({text})" );
@@ -21,13 +21,46 @@ namespace Sandbox
 			if ( initialized ) return;
 
 			ReplaceAllFootsteps();
+			ReplaceAllImpactParticles();
 
 			initialized = true;
 		}
 
+		public static void ReplaceAllImpactParticles()
+		{
+			ReplaceImpactParticle( "default" );
+			ReplaceImpactParticle( "concrete" );
+			ReplaceImpactParticle( "wood" );
+			ReplaceImpactParticle( "wood.sheet" );
+			ReplaceImpactParticle( "plastic" );
+
+			ReplaceImpactParticle( "dirt" );
+
+			ReplaceImpactParticle( "metal" );
+			ReplaceImpactParticle( "metal.sheet" );
+		}
+
+		public static void ReplaceImpactParticle(String type)
+		{
+			Surface foundSurface = Surface.FindByName( type );
+			if ( foundSurface == null )
+			{
+				Log.Error( $"Surface type '{type}' could not be found. Footstep replace canceled" );
+				return;
+			}
+
+			Surface.ImpactEffectData impactEffectData = new Surface.ImpactEffectData();
+			impactEffectData.BulletDecal = foundSurface.ImpactEffects.BulletDecal;
+			impactEffectData.Regular = foundSurface.ImpactEffects.Regular;
+			impactEffectData.Bullet = new string[] { "particles/hl1_impact_bullet.vpcf" };
+
+			foundSurface.ImpactEffects = impactEffectData;
+
+			Log.Info( $"Replaced '{type}' particles" );
+		}
+
 		public static void ReplaceAllFootsteps()
 		{
-
 			ReplaceFootstepPostfix( "default", "hl1-footstep-concrete" );
 			ReplaceFootstepPostfix( "concrete", "hl1-footstep-concrete" );
 			ReplaceFootstepPostfix( "wood", "hl1-footstep-concrete" );

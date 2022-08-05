@@ -121,7 +121,7 @@ namespace Sandbox
 		/// </summary>
 		public override void OnAnimEventFootstep( Vector3 pos, int foot, float volume )
 		{
-			SoundReplacer.Init();
+			AssetReplacer.Init();
 
 			if ( LifeState != LifeState.Alive )
 				return;
