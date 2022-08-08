@@ -22,7 +22,8 @@ namespace Sandbox
 				Parent = this,
 				Position = Position,
 				EnableTouch = false,
-				EnableSelfCollisions = false
+				EnableSelfCollisions = false,
+				EnableAllCollisions = false
 			};
 
 			PickupTrigger.PhysicsBody.AutoSleep = false;
@@ -34,7 +35,9 @@ namespace Sandbox
 		{
 			base.StartTouch( other );
 
-			if ( other is BaseTrigger ) return;
+			if ( Owner == other ) return;
+
+			Logging.GetLogger().Info( other.GetType() );
 
 			ExplosionEntity explosionEntity = new ExplosionEntity();
 			explosionEntity.ParticleOverride = "particles/hl1_explosion.vpcf";
