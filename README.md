@@ -1,10 +1,6 @@
 # This gamemode is in heavy development.
 ### Further documentation will be provided eventually.
 
-Here's a short video demonstrating the current progress (outdated):
-
-https://user-images.githubusercontent.com/21970287/181487717-d00a115e-f458-4e1b-88ee-28609a249369.mp4
-
 # Goals of this project:
 - Provide an easy-to-modify framework for porting GoldSrc content straight into s&box
 
