@@ -23,7 +23,7 @@
 							},
 							{
 								from = "bulletchrome.vmat"
-								to = "materials/models/shell/front.vmat"
+								to = "materials/models/v_glock/bulletchrome.vmat"
 							},
 						]
 						use_global_default = false
