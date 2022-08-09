@@ -1,10 +1,26 @@
-// Converted with vmt_to_vmat.py
+// THIS FILE IS AUTO-GENERATED
 
 Layer0
 {
-	shader "vr_complex.vfx"
+	shader "projected_decals.vfx"
 
-	TextureColor "materials\decals\{shot3_color.tga"
-	F_TRANSLUCENT 1
-	TextureTranslucency "materials\decals\{shot3_trans.tga"
+	//---- Ambient Occlusion ----
+	TextureAmbientOcclusion "materials/default/default_ao.tga"
+
+	//---- Color ----
+	TextureColor "materials/decals/{shot3_color.tga"
+
+	//---- Fog ----
+	g_bFogEnabled "1"
+
+	//---- Lighting ----
+	g_flDirectionalLightmapMinZ "0.050"
+	g_flDirectionalLightmapStrength "1.000"
+	g_flGlossiness "0.500"
+
+	//---- Metalness ----
+	TextureMetalness "materials/default/default_metal.tga"
+
+	//---- Translucent ----
+	TextureTranslucency "materials/decals/{shot3_trans.tga"
 }

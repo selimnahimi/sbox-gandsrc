@@ -53,6 +53,7 @@ namespace Sandbox
 			impactEffectData.BulletDecal = foundSurface.ImpactEffects.BulletDecal;
 			impactEffectData.Regular = foundSurface.ImpactEffects.Regular;
 			impactEffectData.Bullet = new string[] { "particles/hl1_impact_bullet.vpcf" };
+			impactEffectData.BulletDecal = new string[] { "decals/gandsrc_bullethole.decal" };
 
 			foundSurface.ImpactEffects = impactEffectData;
 
